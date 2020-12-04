@@ -1,0 +1,116 @@
+.main {
+    &_section {
+        position: relative;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+    &_img {
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+
+        img {
+            transition: all .5s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-right: 1px solid rgba(255, 255, 255, 0.708);
+        }
+    }
+    &_content {
+        display: block;
+        padding-top: 25vh;
+    }
+    &__block {
+        transition: all .5s;
+        display: block;
+        height: 100vh;
+        position: relative;
+        width: 33.3%;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.317);
+        }
+        &:last-child {
+            .main_img {
+                border-right: unset;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        &:hover {
+            width: 40%;
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &_title {
+        min-height: 125px;
+        text-align: center;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 1320px) {
+
+}
+
+@media (max-width: 992px) {
+    .main_img {
+        height: 40vh;
+    }    
+    .main_content {
+        display: block;
+        padding-top: 30vh;
+    }
+}
+@media (max-width: 690px) {
+    .main_content {
+        display: block;
+        padding-top: 0;
+    }
+    .main__block {
+        width: 100%;
+        height: unset;
+
+        &:hover {
+            width: 100%;
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .main_img {
+        background: #000;
+
+        img {
+            opacity: .4;
+        }
+    }
+    .main_section {
+        flex-direction: column;
+        height: unset;
+    }
+    .absolute_bg {
+        display: none;
+    }
+    .main_title {
+        position: absolute;
+        min-height: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
