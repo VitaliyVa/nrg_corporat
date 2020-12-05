@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./energetion.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -929,25 +929,25 @@ function valide_form(id_form, append_error_box, check_request) {
 
 /***/ }),
 
-/***/ "../components/pages/index/index.js":
-/*!******************************************!*\
-  !*** ../components/pages/index/index.js ***!
-  \******************************************/
+/***/ "../components/pages/energetion/index.js":
+/*!***********************************************!*\
+  !*** ../components/pages/energetion/index.js ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/pages/index/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/pages/energetion/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
 
-/***/ "../components/pages/index/index.scss":
-/*!********************************************!*\
-  !*** ../components/pages/index/index.scss ***!
-  \********************************************/
+/***/ "../components/pages/energetion/index.scss":
+/*!*************************************************!*\
+  !*** ../components/pages/energetion/index.scss ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -957,10 +957,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/***/ "./energetion.js":
+/*!***********************!*\
+  !*** ./energetion.js ***!
+  \***********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -973,7 +973,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_module_form_errors_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/module/form_errors/index */ "../components/module/form_errors/index.js");
 /* harmony import */ var _components_common_componentc_header_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/common_componentc/header/index */ "../components/common_componentc/header/index.js");
 /* harmony import */ var _components_common_componentc_footer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/common_componentc/footer/index */ "../components/common_componentc/footer/index.js");
-/* harmony import */ var _components_pages_index_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/pages/index/index */ "../components/pages/index/index.js");
+/* harmony import */ var _components_pages_energetion_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/pages/energetion/index */ "../components/pages/energetion/index.js");
 // script interface
 
 

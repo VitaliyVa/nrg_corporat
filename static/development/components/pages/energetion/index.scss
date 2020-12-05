@@ -1,0 +1,119 @@
+.service {
+    &_section {
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &_navigation__block {
+        position: absolute;
+        top: 0;
+        padding: 0px 5%;
+        padding-top: 110px;
+        min-height: 220px;
+    }
+    &_navigation {
+        display: flex;
+        align-items: center;
+        svg {
+            transform: rotate(-90deg);
+            width: 17px;
+            height: 20px;
+        }
+        span {
+            padding-left: 10px;
+        }
+    }
+    &_title {
+        padding-top: 10px;
+    }
+}
+.service__block {
+    display: flex;
+    flex-wrap: wrap;
+}
+.service_prof {
+    position: relative;
+    transition: all .2s;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 30px 5%;
+    width: 33.3%;
+    background: transparent;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -100vh;
+        right: 0;
+        width: 1px;
+        height: 200vh;
+        background: rgba(255, 255, 255, 0.119);
+    }
+    &:last-child {
+       
+        &:after {
+            display: none;
+        }
+    }
+    &_arrow {
+        width: 15px;
+        transform: rotate(90deg);
+    }
+    &_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        span {
+            padding-right: 10px;
+        }
+    }
+    &_img {
+        padding-bottom: 10px;
+    }
+    
+
+    &:hover {
+        background: #ffffff2b;
+    }
+    &_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background: transparent;
+        }
+    }
+}
+
+@media screen and ( max-height: 830px ) and ( min-width: 1520px ) {
+    .service_navigation__block {
+        position: relative;
+    }
+    .service_section {
+        justify-content: unset;
+    }
+}
+
+@media (max-width: 992px) {
+    .service_prof {
+        width: 100%;
+    }
+    .service_section {
+        overflow: auto;
+        height: unset;
+    }
+    .service_navigation__block {
+        position: relative;
+    }
+    .service_prof:after {
+        content: '';
+        display: none;
+    }
+}

@@ -48,6 +48,9 @@ main {
     font-weight: 800;
     font-stretch: normal;
     font-style: normal;
+    &_1 {
+        font-size: 24px;
+    }
     &_3 {
         font-size: 41px;
     }
@@ -81,5 +84,11 @@ main {
 @media (max-width: 992px) {
     .bigger_title_3 {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 435px) {
+    .bigger_title_1 {
+        font-size: 18px;
     }
 }

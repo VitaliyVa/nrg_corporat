@@ -9,7 +9,7 @@ const optimization = () => {
     const config = {
 
     }
-    if(isProd){
+    if (isProd) {
         config.minimizer = [
             new TerserPlugin(),
             new OptimizeCssAssetsPlugin()
@@ -29,45 +29,46 @@ const cssLoaders = extra => {
         'css-loader'
     ]
 
-    if(extra){
+    if (extra) {
         loader.push(extra)
     }
     return loader;
 }
 
 module.exports = {
-    context: path.resolve(__dirname,'development/pages') ,
-    entry:{
-        index:  './index.js' ,
+    context: path.resolve(__dirname, 'development/pages'),
+    entry: {
+        index: './index.js',
+        energetion: './energetion.js',
     },
-    output:{
-        filename:'[name]/index.js',
-        path:path.resolve(__dirname,'source/pages/')
+    output: {
+        filename: '[name]/index.js',
+        path: path.resolve(__dirname, 'source/pages/')
     },
-    resolve:{
+    resolve: {
         alias: {
-            '@component' : path.resolve(__dirname,'development/components')
+            '@component': path.resolve(__dirname, 'development/components')
         },
     },
-    devtool:isDev ? 'source-map' : '',
-    optimization:optimization(),
-    devServer:{
+    devtool: isDev ? 'source-map' : '',
+    optimization: optimization(),
+    devServer: {
         port: 3801,
         hot: isDev
     },
     plugins: [new MiniCssExtractPlugin({
-        filename:'[name]/index.css',
+        filename: '[name]/index.css',
     })],
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader:{
+                loader: {
                     loader: 'babel-loader',
                     options: {
                         presets: ["@babel/preset-env"],
-                  
+
                     }
                 }
             },
@@ -79,7 +80,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: cssLoaders('sass-loader')
             },
-             
+
             // {
             //     test: /\.(ttf|woff|woff2|eot)$/,
             //     use:['file-loader']
