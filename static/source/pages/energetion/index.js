@@ -631,6 +631,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var inputHasFocus = $('.input_focus');
+inputHasFocus.on('focus', function () {
+  var focusFinder = $(this).parents('.inp-vak-wrap').find('.label__style');
+  focusFinder.addClass('label__style_active');
+});
+inputHasFocus.on('blur', function () {
+  if ($(this).val().length < 1 || $(this).val() == '+38(___) __ __ ___') {
+    var blurFinder = $(this).parents('.inp-vak-wrap').find('.label__style');
+    blurFinder.removeClass('label__style_active');
+  }
+});
 
 /***/ }),
 
@@ -730,6 +741,7 @@ $(function () {
 function Onload() {
   valide_form('.form__block', '.input', true);
   valide_form('.form_consultation', '.input', true);
+  valide_form('#form_calculator', '.inp-vak-wrap', true);
 } // вертає конкретну мову, яка стоїть зараз на сайті
 
 
@@ -791,6 +803,10 @@ function valide_form(id_form, append_error_box, check_request) {
           // operator: true,
 
         },
+        email: {
+          required: true,
+          email: true
+        },
         message: {
           required: true
         },
@@ -803,6 +819,10 @@ function valide_form(id_form, append_error_box, check_request) {
           required: errore_text.required // email: errore_text.email,
           // operator: array_error.curr_text,
 
+        },
+        email: {
+          required: errore_text.required,
+          email: errore_text.email
         },
         message: {
           required: errore_text.required

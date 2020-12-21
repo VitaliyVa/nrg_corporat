@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./sun_energetion.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -949,25 +949,10 @@ function valide_form(id_form, append_error_box, check_request) {
 
 /***/ }),
 
-/***/ "../components/pages/index/index.js":
-/*!******************************************!*\
-  !*** ../components/pages/index/index.js ***!
-  \******************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/pages/index/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
-
-
-/***/ }),
-
-/***/ "../components/pages/index/index.scss":
-/*!********************************************!*\
-  !*** ../components/pages/index/index.scss ***!
-  \********************************************/
+/***/ "../components/pages/sun_energetion/calculator.scss":
+/*!**********************************************************!*\
+  !*** ../components/pages/sun_energetion/calculator.scss ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -977,10 +962,240 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/***/ "../components/pages/sun_energetion/index.js":
+/*!***************************************************!*\
+  !*** ../components/pages/sun_energetion/index.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _calculator_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calculator.scss */ "../components/pages/sun_energetion/calculator.scss");
+/* harmony import */ var _calculator_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_calculator_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "../components/pages/sun_energetion/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+$('.project_slider__block').slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  lazyLoad: "ondemand",
+  autoplay: false,
+  arrows: false,
+  responsive: [{
+    breakpoint: 775,
+    settings: {
+      slidesToShow: 1
+    }
+  }]
+});
+$('.left_slide_arrow').click(function () {
+  $(".project_slider__block").slick('slickPrev');
+});
+$('.right_slide_arrow').click(function () {
+  $(".project_slider__block").slick('slickNext');
+});
+$('.investment_list_btn').on('click', function () {
+  var wrapper = $(this).parents('.investment_list__block');
+  $(wrapper).toggleClass('active');
+});
+$(function () {
+  var first_output = $('.first_output')[0];
+  var second_output = $('.second_output')[0];
+  var third_output = $('.third_output')[0];
+  var four_output = $('.four_output')[0];
+  var first_out = $('.cost_calk')[0];
+  var second_out = $('.profit_calk')[0];
+  var third_out = $('.cost_calk_2')[0];
+  var four_out = $('.profit_calk_2')[0];
+  var current_year = 4;
+  var current_kilowatt = 25;
+  var kilowatt_ratio = 7000 / 40;
+  var price;
+  var profit;
+  var current_year_2 = 5;
+  var current_kilowatt_2 = 40;
+  var slider = document.getElementById('slider1');
+  noUiSlider.create(slider, {
+    start: [25],
+    connect: [true, false],
+    range: {
+      'min': 1,
+      'max': 50
+    },
+    tooltips: false
+  });
+  var val_kilowatt;
+  slider.noUiSlider.on('update', function (values) {
+    val_kilowatt = Math.floor(values[0]);
+    first_output.innerHTML = val_kilowatt + " кВт";
+    current_kilowatt = val_kilowatt;
+    price = Math.round(current_kilowatt * (kilowatt_ratio * current_year));
+    second_out.innerHTML = '€ ' + price;
+    profit = Math.round(750 * current_kilowatt);
+    first_out.innerHTML = '€ ' + profit;
+  });
+  var slider2 = document.getElementById('slider2');
+  noUiSlider.create(slider2, {
+    start: [4],
+    connect: [true, false],
+    range: {
+      'min': 1,
+      'max': 10
+    },
+    tooltips: false
+  });
+  var val_floor2;
+  slider2.noUiSlider.on('update', function (values) {
+    val_floor2 = Math.floor(values[0]);
+    second_output.innerHTML = val_floor2;
+    current_year = val_floor2;
+    price = Math.round(current_kilowatt * (kilowatt_ratio * current_year));
+    second_out.innerHTML = '€ ' + price;
+    profit = Math.round(750 * current_kilowatt);
+    first_out.innerHTML = '€ ' + profit;
+  }); //
+
+  var slider3 = document.getElementById('slider3');
+  noUiSlider.create(slider3, {
+    start: [40],
+    connect: [true, false],
+    range: {
+      'min': 40,
+      'max': 400
+    },
+    tooltips: false
+  });
+  var val_floor3;
+  slider3.noUiSlider.on('update', function (values) {
+    val_floor3 = Math.floor(values[0]);
+    third_output.innerHTML = val_floor3 + " кВт";
+    current_kilowatt_2 = val_floor3;
+    price = Math.round(7000 * current_year_2 * (current_kilowatt_2 / 40));
+    four_out.innerHTML = '€ ' + price;
+    profit = Math.round(current_kilowatt_2 * 750);
+    third_out.innerHTML = '€ ' + profit;
+  }); //
+
+  var slider4 = document.getElementById('slider4');
+  noUiSlider.create(slider4, {
+    start: [5],
+    connect: [true, false],
+    range: {
+      'min': 1,
+      'max': 10
+    },
+    tooltips: false
+  });
+  var val_floor4;
+  slider4.noUiSlider.on('update', function (values) {
+    val_floor4 = Math.floor(values[0]);
+    four_output.innerHTML = val_floor4;
+    current_year_2 = val_floor4;
+    price = Math.round(7000 * current_year_2 * (current_kilowatt_2 / 40));
+    four_out.innerHTML = '€ ' + price;
+    profit = Math.round(current_kilowatt_2 * 750);
+    third_out.innerHTML = '€ ' + profit;
+  });
+});
+$.extend($.lazyLoadXT, {
+  edgeY: 250,
+  srcAttr: 'data-src'
+});
+$(".scroll_all").on('click', function () {
+  var elementClick = $(this).attr("href");
+  var destination = $(elementClick).offset().top;
+  var destContacts = destination - 100;
+  $('html, body').animate({
+    scrollTop: destContacts
+  }, 600);
+  return false;
+});
+$('.consultation_js').fancybox({
+  touch: false,
+  scrolling: 'hidden'
+});
+var check_box = "З прив'язкою до виробітку електроенерії";
+var first_output = $('.first_output');
+var second_output = $('.second_output');
+var third_output = $('.third_output');
+var four_output = $('.four_output');
+var first_num = first_output.text().replace(/\s+/g, '');
+var second_num = second_output.text().replace(/\s+/g, '');
+var third_num = third_output.text().replace(/\s+/g, '');
+var four_num = four_output.text().replace(/\s+/g, '');
+var cost_calk = $('.cost_calk');
+var cost_calk_2 = $('.cost_calk_2');
+var profit_calk = $('.profit_calk');
+var profit_calk_2 = $('.profit_calk_2');
+var hidden_input_1 = $('.input_check_box');
+var hidden_input_2 = $('.input_first_output');
+var hidden_input_3 = $('.input_second_output');
+var hidden_input_4 = $('.input_cost_calk');
+var hidden_input_5 = $('.input_profit_calk');
+hidden_input_1.val(check_box);
+hidden_input_2.val(first_num);
+hidden_input_3.val(second_num);
+hidden_input_4.val(cost_calk.text());
+hidden_input_5.val(profit_calk.text());
+var first_range_block = $('.first_range-block')[0];
+var first_ranges = $('.first_range');
+$('.lab-1').on('click', function () {
+  check_box = "З прив'язкою до виробітку електроенерії";
+  $('#main_calculator_1').removeClass('main_calculator_hidden');
+  $('#main_calculator_2').addClass('main_calculator_hidden');
+  $('.radio-block').addClass('version_1');
+  $('.radio-block').removeClass('version_2');
+});
+$('.lab-2').on('click', function () {
+  check_box = "З гарантованою виплатою";
+  $('#main_calculator_2').removeClass('main_calculator_hidden');
+  $('#main_calculator_1').addClass('main_calculator_hidden');
+  $('.radio-block').removeClass('version_1');
+  $('.radio-block').addClass('version_2');
+});
+$('.calc_btn_1').on('click', function () {
+  first_num = first_output.text().replace(/\s+/g, '');
+  second_num = second_output.text().replace(/\s+/g, '');
+  hidden_input_1.val(check_box);
+  hidden_input_2.val(first_num);
+  hidden_input_3.val(second_num);
+  hidden_input_4.val(cost_calk.text());
+  hidden_input_5.val(profit_calk.text());
+});
+$('.calc_btn_2').on('click', function () {
+  third_num = third_output.text().replace(/\s+/g, '');
+  four_num = four_output.text().replace(/\s+/g, '');
+  hidden_input_1.val(check_box);
+  hidden_input_2.val(third_num);
+  hidden_input_3.val(four_num);
+  hidden_input_4.val(cost_calk_2.text());
+  hidden_input_5.val(profit_calk_2.text());
+});
+
+/***/ }),
+
+/***/ "../components/pages/sun_energetion/index.scss":
+/*!*****************************************************!*\
+  !*** ../components/pages/sun_energetion/index.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+    if(false) { var cssReload; }
+  
+
+/***/ }),
+
+/***/ "./sun_energetion.js":
+/*!***************************!*\
+  !*** ./sun_energetion.js ***!
+  \***************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -993,7 +1208,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_module_form_errors_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/module/form_errors/index */ "../components/module/form_errors/index.js");
 /* harmony import */ var _components_common_componentc_header_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/common_componentc/header/index */ "../components/common_componentc/header/index.js");
 /* harmony import */ var _components_common_componentc_footer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/common_componentc/footer/index */ "../components/common_componentc/footer/index.js");
-/* harmony import */ var _components_pages_index_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/pages/index/index */ "../components/pages/index/index.js");
+/* harmony import */ var _components_pages_sun_energetion_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/pages/sun_energetion/index */ "../components/pages/sun_energetion/index.js");
 // script interface
 
 

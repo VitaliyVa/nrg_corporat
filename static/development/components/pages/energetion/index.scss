@@ -7,6 +7,11 @@
         flex-direction: column;
         justify-content: center;
     }
+   
+   
+   
+}
+.service {
     &_navigation__block {
         position: absolute;
         top: 0;
@@ -29,7 +34,8 @@
     &_title {
         padding-top: 10px;
     }
-}
+  }
+
 .service__block {
     display: flex;
     flex-wrap: wrap;

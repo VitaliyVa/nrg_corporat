@@ -40,6 +40,7 @@ module.exports = {
     entry: {
         index: './index.js',
         energetion: './energetion.js',
+        sun_energetion: './sun_energetion.js',
     },
     output: {
         filename: '[name]/index.js',

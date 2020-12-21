@@ -11,6 +11,7 @@ main {
     user-select: none;           /* Non-prefixed version, currently
                                     not supported by any browser */
   }
+
 .container {
     padding: 0px 5%;
     width: 100%;
@@ -23,6 +24,20 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.shadow_title {
+    position: absolute;
+    font-size: 120px;
+    padding: 0px 5%;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f4f4f4;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 //  тут шрифти 400 ==================>
@@ -38,11 +53,35 @@ main {
     &_1 {
         font-size: 16px;
     }
+    &_2 {
+        font-size: 18px;
+    }
   
   
     
 }
 
+//  тут шрифти 700 ==================>
+.standart_title {
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    &_0 {
+        font-size: 16px;
+    }
+    &_1 {
+        font-size: 18px;
+    }
+    &_3 {
+        font-size: 24px;
+    }
+    &_5 {
+        font-size: 36px;
+    }
+    &_7 {
+        font-size: 75px;
+    }
+}
 //  тут шрифти 800 ==================>
 .bigger_title {
     font-weight: 800;
@@ -53,6 +92,9 @@ main {
     }
     &_3 {
         font-size: 41px;
+    }
+    &_8 {
+        font-size: 80px;
     }
    
 }
@@ -69,13 +111,26 @@ main {
     }
     &_black {
         color: #1D293F;
+        &_2 {
+            color: #1a1919;
+        }
     }
     &_white {
         color: #fff;
     }
+    &_green {
+        color: #28b56a;
+    }
 }
 
 
+@media (max-width: 1560px) {
+    .preferens_number__block {
+        .bigger_title_8 {
+            font-size: 60px;
+        }
+    }
+}
 @media (max-width: 1320px) {
     .bigger_title_3 {
         font-size: 31px;
@@ -86,9 +141,24 @@ main {
         font-size: 24px;
     }
 }
-
+@media (max-width: 490px) {
+    .standart_title_5 {
+        font-size: 18px;
+    }
+    .standart_title_3 {
+        font-size: 17px;
+    }
+    .bigger_title_8 {
+        font-size: 30px !important;
+    }
+     .standart_title_7 {
+        font-size: 40px;
+    }
+}
 @media (max-width: 435px) {
     .bigger_title_1 {
         font-size: 18px;
     }
 }
+
+

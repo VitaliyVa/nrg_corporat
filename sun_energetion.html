@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./static/source/lib/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./static/source/lib/slick/slick.min.css">
+  <link rel="stylesheet" href="./static/source/lib/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="./static/source/pages/sun_energetion/index.css">
+
+</head>
+
+<body>
+
+  <div class="load_spin">
+    <img src="./static/source/img/712.svg" alt="">
+  </div>
+  <form method="POST" action="" class="true_form" id="modal-form_true" style="display:none;">
+    <img class="form_true_img" src="./static/source/img/png-123.png" alt="">
+    <svg class='error_form' color='red' aria-hidden="true" focusable="false" data-prefix="fas"
+      data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z">
+      </path>
+    </svg>
+    <div class="usually_modal_text">
+      Дякуємо, заявка опрацьована <br> Наші менеджери звяжуться з Вами
+    </div>
+  </form>
+
+  <header class="header">
+    <div class="container">
+      <div class="header_lang__block header_item">
+        <a href="#" class="header_lang_link active sub_title sub_title_0 color_white">Укр</a>
+        <a href="#" class="header_lang_link sub_title sub_title_0 color_white">Eng</a>
+      </div>
+      <a href="/" class="header_logo__block">
+        <img src="./static/source/img/nrg-logo-vector-copy.svg" alt="">
+      </a>
+      <a href="tel:+380961231212" class="header_mobile_link header_item sub_title sub_title_0 color_white">
+        +38 096 123 12 12
+      </a>
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+  <section class="bread_crumbs_section">
+    <div class="bread_crumbs_bg">
+      <img src="./static/source/img/sun_energetion/sun_header.png" alt="">
+    </div>
+    <div class="container">
+      <div class="service_navigation__block">
+        <a href="/" class="service_navigation sub_title sub_title_1 color_white">
+          <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-up" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+            class="svg-inline--fa fa-long-arrow-up fa-w-8 fa-5x">
+            <path fill="currentColor"
+              d="M3.515 168.97l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L111 92.113V468c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V92.113l83.444 83.928c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-116-116.485c-4.686-4.686-12.284-4.686-16.971 0L3.515 152c-4.687 4.686-4.687 12.284 0 16.97z"
+              class=""></path>
+          </svg>
+          <span>Альтернативна енергетика</span>
+        </a>
+        <div class="service_title bigger_title bigger_title_3 color_white">
+          Сонячна енергетика
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.bread_crumbs_section -->
+  <section class="energetion_navigate_section">
+    <div class="container">
+      <ul class="energetion_navigate__block">
+        <li class="energetion_navigate_li standart_title standart_title_1 color_black active">
+          Наші проекти
+        </li>
+        <li class="energetion_navigate_li standart_title standart_title_1 color_black">
+          Зелений тариф
+        </li>
+        <li class="energetion_navigate_li standart_title standart_title_1 color_black">
+          Калькулятор
+        </li>
+        <li class="energetion_navigate_li standart_title standart_title_1 color_black">
+          Наші переваги
+        </li>
+      </ul>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.energetion_navigate -->
+
+  <section class="project_section">
+    <div class="container">
+      <div class="shadow_title">
+        Наші проекти
+      </div>
+      <div class="project_slider_navigation">
+        <div class="left_slide_arrow slide_arrow">
+          <img src="./static/source/img/sun_energetion/arrow-left-copy.svg" alt="">
+        </div>
+        <div class="right_slide_arrow slide_arrow">
+          <img src="./static/source/img/sun_energetion/arrow-right-copy.svg" alt="">
+        </div>
+      </div>
+      <div class="project_slider__block">
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-1.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-2.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-1.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-2.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="project_slider__block">
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-3.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-3.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-3.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href='#' class="project_slider_profile">
+          <div class="project_slider_profile_bg">
+            <img src="./static/source/img/sun_energetion/proect-3.png" alt="">
+          </div>
+          <div class="project_slider_profile_content">
+            <div class="project_slider_profile_name standart_title standart_title_0 color_white">
+              CEC В. Гаї
+            </div>
+            <div class="project_slider_profile_price standart_title standart_title_7 color_green">
+              10 000
+              <span class='standart_title standart_title_3'>
+                кВт/год
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.project_section -->
+
+  <section class="preferens_section">
+    <div class="container">
+      <div class="preferens__wrapper">
+        <div class="preferens_number__block">
+          <div class="preferens_number_content">
+            <div class="preferens_number_title standart_title standart_title_3 color_white">
+              Виробили за 2 роки:
+            </div>
+            <div class="preferens_number">
+              <span class="preferens_number_item bigger_title bigger_title_8 color_white">7 826 819 </span>
+              <span class="preferens_number_text standart_title standart_title_3 color_white">кВт/год</span>
+            </div>
+          </div>
+          <div class="preferens_number_content">
+            <div class="preferens_number_title standart_title standart_title_3 color_white">
+              Які принесли прибуток клієнтам:
+            </div>
+            <div class="preferens_number">
+              <span class="preferens_number_item bigger_title bigger_title_8 color_white">32 000 000 </span>
+              <span class="preferens_number_text standart_title standart_title_3 color_white">грн</span>
+            </div>
+          </div>
+        </div>
+        <div class="preferens_right_content sub_title sub_title_2 color_black_2">
+          Загалом, компанією освоєно ___ га земельних ділянок на яких споруджено об’єкти сонячної енергетики та з метою
+          інвестування коштів у альтернативну енергетику у 2021 році заплановано відведення ___ га.
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.preferens_section -->
+
+  <section class="green_tariff_section">
+    <div class="container">
+      <div class="shadow_title">
+        Зелений тариф
+      </div>
+      <div class="green_tariff_title standart_title standart_title_5 color_black_2">
+        Що таке зелений тариф, дивіться відео про нього:
+      </div>
+      <div class="tariff_video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/M_yz2X7EC0M" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.green_tariff -->
+  <section class="calculate_section">
+    <div class="calculate_bg">
+      <img src="./static/source/img/sun_energetion/calc_bg.png" alt="">
+    </div>
+    <div class="container">
+      <div class="shadow_title">
+        Калькулятор
+      </div>
+      <div class="calculator_content sub_title sub_title_2 color_black_2">
+        У ĸомпанії NRG все чисто та прозоро, тому ми розробили данний ĸальĸулятор для Вас. Ви з легĸістю можете
+        розрахувати вартість інвестицій та їх прибутĸовість, всього лише за деĸільĸа ĸліĸів
+      </div>
+      <div class="calculator_wrap">
+        <div class="arrow_calc">
+          <img src="static/img/path.svg" alt="">
+        </div>
+        <div class="flex-block">
+
+        </div>
+        <div id="main_calculator_1" class="main_calculator">
+          <div class="calc_data">
+            Тип пайової участі
+          </div>
+          <div class="radio-block version_1">
+            <input value="True" type="radio" id="rd1" name="actual" checked>
+            <label class="lab-1" for="rd1">З прив'язкою до виробітку електроенерії</label>
+            <input value="False" type="radio" id="rd2" name="actual">
+            <label class="lab-2" for="rd2">З гарантованою виплатою</label>
+          </div>
+          <div class="first_range-block">
+            <div class="range_info-block">
+              <div class="range_info range_info_1">
+                Кількість кіловат
+              </div>
+
+              <output class="first_output" style="display: inline-block">
+                25 кВт
+              </output>
+            </div>
+            <div class="range_slider" id="slider1"></div>
+          </div>
+          <div class="second_range-block">
+            <div class="range_info-block">
+              <div class="range_info">
+                Кількість років
+              </div>
+              <output class="second_output" style="display: inline-block">
+                4
+              </output>
+            </div>
+            <div class="range_slider" id="slider2"></div>
+          </div>
+          <div class="result-block">
+            <div class="res-wrap">
+              <div class="result-prof">
+                <div class="result_info">
+                  Вартість
+                </div>
+                <div class="cost_calk">€ 28000</div>
+              </div>
+              <div class="result-prof">
+                <div class="result_info">
+                  Прибуток
+                </div>
+                <div class="profit_calk">€ 17500</div>
+              </div>
+            </div>
+            <div
+              class="btn_standart btn_standart_black consultatin_btn calc_btn calc_btn_1 consultation_js hvr-shutter-in-vertical"
+              data-src='#form_calculator'>
+              <!-- Подзвонити Нам -->
+              Отримати консультацію
+            </div>
+          </div>
+        </div>
+        <div id="main_calculator_2" class="main_calculator main_calculator_hidden">
+          <div class="calc_data">
+            Тип пайової участі
+          </div>
+          <div class="radio-block version_1">
+            <input value="True" type="radio" id="rd1" name="actual2">
+            <label class="lab-1" for="rd1">З прив'язкою до виробітку електроенерії</label>
+            <input value="False" type="radio" id="rd2" name="actual2" checked>
+            <label class="lab-2" for="rd2">З гарантованою виплатою</label>
+          </div>
+          <div class="first_range-block">
+            <div class="range_info-block">
+              <div class="range_info range_info_1">
+                Потужність станції
+              </div>
+              <output class="third_output" style="display: inline-block">
+                40 кВт
+              </output>
+            </div>
+            <div class="range_slider" id="slider3"></div>
+
+          </div>
+          <div class="second_range-block">
+            <div class="range_info-block">
+              <div class="range_info">
+                Кількість років
+              </div>
+              <output class="four_output" style="display: inline-block">
+                5
+              </output>
+            </div>
+            <div class="range_slider" id="slider4"></div>
+          </div>
+          <div class="result-block">
+            <div class="res-wrap">
+              <div class="result-prof">
+                <div class="result_info">
+                  Вартість
+                </div>
+                <div class="cost_calk_2">€ 30000</div>
+              </div>
+              <div class="result-prof">
+                <div class="result_info">
+                  Прибуток
+                </div>
+                <div class="profit_calk_2">€ 35000</div>
+              </div>
+            </div>
+            <div
+              class="btn_standart btn_standart_black consultatin_btn calc_btn calc_btn_2 consultation_js hvr-shutter-in-vertical"
+              data-src='#form_calculator'>
+              <!-- Подзвонити Нам -->
+              Отримати консультацію
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.calculate_section -->
+
+  <section class="benefits_section">
+    <div class="benefits_bg">
+      <img src="./static/source/img/sun_energetion/benefits_bg.png" alt="">
+    </div>
+    <div class="container">
+      <div class="shadow_title">
+        Наші переваги
+      </div>
+      <div class="benefits__block">
+        <div class="benefits_profile">
+          <div class="benefits_img">
+            <img src="./static/source/img/sun_energetion/benefits-1.png" alt="">
+          </div>
+
+          <div class="benefits_title standart_title standart_title_0 color_white">
+            Цілодобовий відеонагляд
+          </div>
+          <div class="benefits_text sub_title sub_title_0 color_white">
+            У будь яĸий момент Ви можете глянути яĸ справи на Вашій земельній ділянці.
+          </div>
+        </div>
+        <div class="benefits_profile">
+          <div class="benefits_img">
+            <img src="./static/source/img/sun_energetion/benefits-2.png" alt="">
+          </div>
+
+          <div class="benefits_title standart_title standart_title_0 color_white">
+            Цілодобова Охорона
+          </div>
+          <div class="benefits_text sub_title sub_title_0 color_white">
+            Наші сміливі охоронці цілодобово партулюють теретиорію ĸооперативу.
+          </div>
+        </div>
+        <div class="benefits_profile">
+          <div class="benefits_img">
+            <img src="./static/source/img/sun_energetion/benefits-3.png" alt="">
+          </div>
+
+          <div class="benefits_title standart_title standart_title_0 color_white">
+            Страхування
+          </div>
+          <div class="benefits_text sub_title sub_title_0 color_white">
+            Град, повінь, чи будь-яĸі лиха це не проблема, адже ми Страхуємо Ваше майно, що не робить жодна ĸомпанія
+          </div>
+        </div>
+        <div class="benefits_profile">
+          <div class="benefits_img">
+            <img src="./static/source/img/sun_energetion/benefits-4.png" alt="">
+          </div>
+
+          <div class="benefits_title standart_title standart_title_0 color_white">
+            Зміна положень
+          </div>
+          <div class="benefits_text sub_title sub_title_0 color_white">
+            Протягом роĸу ми 4 рази змінюємо положення сонячних панелей щоб Ви могли отримати маĸсимум прибутĸу.
+          </div>
+        </div>
+        <div class="benefits_profile">
+          <div class="benefits_img">
+            <img src="./static/source/img/sun_energetion/benefits-5.png" alt="">
+          </div>
+          <div class="benefits_title standart_title standart_title_0 color_white">
+            Чистота та Блисĸи
+          </div>
+          <div class="benefits_text sub_title sub_title_0 color_white">
+            Ми гарантуємо, що Ваші панелі завжди будуть чисті та доглянуті щоб Ви отримали маĸсимум потужностей
+          </div>
+        </div>
+        <div class="benefits_profile">
+          <div class="btn_standart btn_standart_white">
+            Отримати консультацію
+          </div>
+        </div>
+      </div>
+      <div class="benefits_content__block">
+        <div class="benefits_content_img">
+          <img src="./static/source/img/sun_energetion/benefits_content-1.png" alt="">
+        </div>
+        <div class="benefits_content_text sub_title sub_title_0 color_white">
+          Сонячна енергетики – один із напрямків поліпшення стану екології. Саме сонячні електростанції не забруднюють
+          ґрунт та атмосферу. Експлуатація сонячної електростанції ніяк не зачіпає атмосферу. Це пов’язано з тим, що
+          енергія генерується завдяки фізичним процесам без шкідливих викидів.
+
+          Технології останніх років, дозволили мінімізувати використання небезпечних для екології речовин в складі
+          кремнієвих пластин.
+
+          Трендом останнього десятиріччя стала відмова від будівництва атомних та теплових електростанції та активний
+          розвиток проектів в сфері сонячної енергетики.
+          В якості підтвердження відсутності шкоди від сонячних електростанцій, хотілось привести, як аргумент, що з
+          моменту введення компанією у експлуатацію об’єктів сонячної енергетики вироблено майже 8 млн. кВт\год
+          електроенергії та внаслідок її діяльності викиди забруднюючих речовин в атмосферне повітря зменшилось на _____
+          CO2. Інший спосіб генерування енергії є точно більш шкідливим в порівнянні з сонячними тепло та
+          електростанціями.
+
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.benefits_section -->
+  <section class="investment_section">
+    <div class="container">
+      <div class="shadow_title">
+        Інвестиційні об’єкти
+      </div>
+    </div>
+    <!-- /.container -->
+    <div class="benefits_content__block">
+      <div class="benefits_content">
+        <div class="benefits_content_title standart_title standart_title_5 color_black">
+          Інвестиційні об’єкти
+        </div>
+        <div class="benefits_content_text sub_title sub_title_0 color_black">
+          Наша компанія з час заснування у створення сонячних електростанцій залучила грошові кошти понад 300
+          інвесторів, у тому числі у 2020 році капітальні вкладення залучено у спорудження 130 таких об’єктів.
+        </div>
+        <div class="benefits_content_text sub_title sub_title_0 color_black">
+          Окрім того, компанією розроблено стратегію розвитку на 2021 рік щодо збільшення кількості виробленої зеленої
+          електроенергії за допомогою сонця, яка охоплює собою залучення інвестиційних коштів у будівництво більш як у
+          300 електростанцій.
+        </div>
+      </div>
+      <div class="benefits_content_img">
+        <img src="./static/source/img/sun_energetion/benefits_content-2.png" alt="">
+      </div>
+    </div>
+    <div class="benefits_content__block benefits_content__block_3">
+      <div class="benefits_content_img">
+        <img src="./static/source/img/sun_energetion/benefits_content-3.png" alt="">
+      </div>
+      <div class="benefits_content">
+        <div class="benefits_content_title standart_title standart_title_5 color_black">
+          Послуги технічного обслуговування
+        </div>
+        <div class="benefits_content_text sub_title sub_title_0 color_black">
+          Ми знаємо енергію зсередини, базуючись на роках утримання та оптимізації власних електростанцій та
+          виробничого парку енергії.
+        </div>
+        <div class="benefits_content_text sub_title sub_title_0 color_black">
+          Ми пропонуємо послуги для всіх типів об'єктів виробництва електроенергії, включаючи об'єкти сонячної
+          системи, які виконуються висококваліфікованими спеціалістами.
+          Ми також доступні для дистанційного моніторингу вашої електростанції в режимі реального часу та у разі
+          необхідно працює мобільна група кваліфікованих фахівців, які здійснюються виїзди до об'єктів енергетики.
+        </div>
+        <div class="investment_list__block">
+          <div class="investment_list_btn standart_title standart_title_3 color_black">
+            <span>Список послуг</span>
+            <img src="./static/source/img/sun_energetion/arrow-left-copy.svg" alt="">
+          </div>
+          <div class="investment_content">
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Зміна кутів станції 4 рази в рік (збільшення генерації на 10 %)</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Моніторинг (електрообладнання (сонячні модулі , інвертор, лічильник, автомати, трансорматорні
+                підстанції)</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Моніторинг Дистанційний NETECO у випадку поломок на лінії ЛЕП робото з Ресом по якнайшвидшому
+                усуненні причин аварії</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Охорона об’єкту ( пультова , фізична , дистанційна)</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Страхуввання об’єкту на всю вартість обладнання (інвертор, сонячні панелі, кабель лічильники
+                автомати) ARX</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Благоустрій території (весна –літо – косіння трави, зима згортання снігу з панелей )</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Юридичний моніторинг змін в законодавстві та відстоювання прав членів постійно</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Миття панелей від пилу і посліду птахів (по потребі)</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Моніторинг квадрокоптером із тепловізором на перегрів та внутрішні пошкодження</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Оплата Інтернет</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Земельний податок</span>
+            </div>
+            <div class="investment_content_profile sub_title sub_title_0 color_black">
+              <div class="investment_content_profile_plus"></div>
+              <span> Моніторинг металевих конструкцій та бетоних елементів</span>
+            </div>
+          </div>
+        </div>
+        <div class="consultant__block">
+          <div class="consultant_title standart_title standart_title_0 color_black">
+            Диспетчерська служба:
+          </div>
+          <a href="tel:+380961231212" class="consultant_link sub_title sub_title_0 color_green">
+            +38 096 123 12 12
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- /.investment_section -->
+  <form method="POST" action="/test/" class="post_forms modal_form" id="form_calculator" style="display:none;">
+    <div class="cons_text">
+      Вступ в ĸооператив
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="name">Ваше ім'я</label>
+      <input class="input_focus" name="name" type="text" required="">
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="email">Електронна пошта</label>
+      <input class="input_focus" name="email" type="text" required="">
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="phone">Ваш телефон</label>
+      <input name="phone" class="num_input input_focus mobile" type="text" required="">
+    </div>
+
+    <div class="error_block_false"></div>
+
+    <input type="hidden" name="check_box" class="input_check_box" value="">
+    <input type="hidden" name="kilowatt" class="input_first_output" value="">
+    <input type="hidden" name="year" class="input_second_output" value="">
+    <input type="hidden" name="cost" class="input_cost_calk" value="">
+    <input type="hidden" name="profit" class="input_profit_calk" value="">
+
+    <input type="submit" value='Відправити' class="submit_cons">
+  </form>
+
+
+  <form method="POST" action="/test/" class="form_consultation modal_form" id="form_consultation" style="display:none;">
+    <div class="all_title__block">
+      <div class="all_title main__title main__title_2 color_white">
+        Залиште заявку і наші менеджери звяжуться з вами.
+      </div>
+    </div>
+    <div class="input input-black">
+      <div class="input_box">
+        <input placeholder="Ім'я" class="input-field txtNumeric" type="text" id="contact_name" name="name">
+      </div>
+    </div>
+    <div class="input input-black in-focus">
+      <div class="input_box">
+        <input placeholder="Номер телефону" class="input-field valid" type="tel" id="contact_phone" name="phone">
+      </div>
+    </div>
+    <input type="submit" value="Надіслати" class="form_btn btn_standart btn_standart_red">
+  </form>
+
+
+  <script src="./static/source/lib/jquery/index.js"></script>
+  <script src="./static/source/lib/slick/slick.min.js"></script>
+  <script src="./static/source/lib/nouislider/nouislider.min.js"></script>
+  <script src="./static/source/lib/validation/validation.min.js"></script>
+  <script src="./static/source/lib/maskinput/maskinput.js"></script>
+  <script src="./static/source/lib/fancybox/jquery.fancybox.min.js"></script>
+  <script src="./static/source/pages/sun_energetion/index.js"></script>
+</body>
+
+</html>

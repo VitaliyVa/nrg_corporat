@@ -1407,96 +1407,891 @@ label.error {
     pointer-events: none; } }
 
 
-.service_section {
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+.caclulator {
+  padding-bottom: 150px; }
 
-.service_navigation__block {
+.calculator_info_block {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  min-height: 505px;
+  background-color: #f9f9f9;
+  padding: 100px 55px; }
+
+.calculator_title {
+  font-size: 30px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #302d2d;
+  margin-bottom: 15px; }
+
+.calculator_subtitle {
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #302d2d; }
+
+.main_calculator {
+  position: relative;
+  right: 0;
+  min-height: 524px;
+  width: 60%;
+  background-color: #ffffff;
+  padding: 60px 70px;
+  position: relative;
+  z-index: 2; }
+
+.main_calculator_hidden {
+  display: none; }
+
+.calculator_wrap {
+  display: flex;
+  margin-top: 0px;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between; }
+  .calculator_wrap:after {
+    position: absolute;
+    content: '';
+    top: -30px;
+    right: -30px;
+    min-height: 624px;
+    width: 60%;
+    z-index: -1;
+    border: 2px solid #29b66c; }
+
+.arrow_calc {
+  position: relative;
+  z-index: 2;
+  margin-left: -115px; }
+  .arrow_calc img {
+    width: 100%; }
+
+.range_info-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 33px;
+  margin-top: 25px; }
+
+.range_info {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #302d2d; }
+
+.second_output, .first_output, .third_output, .four_output {
+  font-size: 35px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: right;
+  color: #302d2d; }
+
+.first_output, .third_output {
+  color: #28b56a; }
+
+.second_output, .four_output {
+  color: #2877b5; }
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked),
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px; }
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label,
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 28px;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f3b3b;
+  cursor: pointer; }
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff; }
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 2px; }
+
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before {
+  border-radius: 100%; }
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #ff4081;
+  border-bottom: 4px solid #ff4081;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  left: 3.16px;
+  top: 4.2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #ff4081; }
+
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  opacity: 0; }
+
+input[type="checkbox"]:checked + label:after,
+input[type="radio"]:checked + label:after {
+  opacity: 1; }
+
+input[type="checkbox"]:checked + label:before,
+input[type="radio"]:checked + label:before {
+  border: 1px solid #e0e0e0; }
+
+nput[type="checkbox"]:checked + label:after,
+input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  background: #28b56a; }
+
+.radio-block {
+  display: flex;
+  flex-direction: column; }
+
+.calc_data {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #302d2d; }
+
+.result-prof {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #302d2d;
+  margin-right: 20px; }
+
+.cost_calk, .profit_calk, .cost_calk_2, .profit_calk_2 {
+  font-size: 24px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #302d2d; }
+
+.result-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px; }
+
+.result_info {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #302d2d;
+  margin-bottom: 3px; }
+
+.input_focus {
+  border-radius: 0; }
+
+.res-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%; }
+
+.all_range_class {
+  width: 100%;
+  transition: all .2s; }
+
+.noUi-horizontal .noUi-handle {
+  outline: none;
+  width: 20px;
+  height: 20px;
+  right: -17px;
+  top: -9px;
+  border-radius: 50%;
+  background: #2877b5;
+  border: 1px solid #ccc;
+  box-shadow: none; }
+
+.noUi-target {
+  border: 1px solid #ccc;
+  box-shadow: none; }
+
+.noUi-connect {
+  background: #2877b5; }
+
+.noUi-horizontal {
+  height: 4px; }
+
+.noUi-handle:after, .noUi-handle:before {
+  display: none; }
+
+.first_range-block .noUi-horizontal .noUi-handle {
+  background: #28b56a; }
+
+.first_range-block .noUi-connect {
+  background: #28b56a; }
+
+.result-block {
+  padding: 15px 35px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column; }
+
+.res-wrap {
+  width: 100%; }
+
+.consultatin_btn {
+  margin-top: 20px;
+  transition: all .2s;
+  border-radius: 4px;
+  background-image: linear-gradient(263deg, #28b56a, #51dba3); }
+  .consultatin_btn:hover {
+    background-image: linear-gradient(263deg, #24a45f, #45bd8d);
+    border: 1px solid transparent !important; }
+
+.calculator_content {
+  position: absolute;
+  top: 100px;
+  left: 5%;
+  width: 35%;
+  z-index: 999; }
+
+.calculate_section {
+  position: relative;
+  padding-top: 420px;
+  padding-bottom: 85px; }
+  .calculate_section .container {
+    position: relative; }
+  .calculate_section .shadow_title {
+    top: -140px; }
+
+.calculate_bg {
   position: absolute;
   top: 0;
-  padding: 0px 5%;
-  padding-top: 110px;
-  min-height: 220px; }
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1; }
+  .calculate_bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.08; }
 
-.service_navigation {
+@media (max-width: 1190px) {
+  .arrow_calc {
+    margin-left: -265px; }
+  .main_calculator {
+    width: 70%; } }
+
+@media (max-width: 985px) {
+  .arrow_calc {
+    display: none; }
+  .main_calculator {
+    width: 100%; }
+  .calculator_info_block {
+    max-width: unset;
+    width: 90%;
+    margin: 0 auto; } }
+
+@media (max-width: 743px) {
+  .calculator_info_block {
+    text-align: left;
+    padding: 20px 36px; }
+  .calculator_title {
+    padding: 0 15px 15px 15px; }
+  .result-prof {
+    margin-bottom: 10px; }
+  .main_calculator {
+    padding: 20px 30px; } }
+
+@media (max-width: 570px) {
+  .result-block {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: end; }
+  .res-wrap {
+    justify-content: unset;
+    width: 100%; }
+  .result-prof {
+    margin-right: 30px; } }
+
+@media (max-width: 525px) {
+  .calculator_subtitle {
+    font-size: 18px; }
+  .calculator_title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    line-height: 1; }
+  .calculator_info_block {
+    width: 100%;
+    padding: 20px 5px; } }
+
+@media (max-width: 373px) {
+  .range_info {
+    font-size: 15px; }
+  .second_output, .first_output, .third_output, .four_output {
+    font-size: 18px; }
+  input[type="checkbox"]:checked + label, input[type="checkbox"]:not(:checked) + label, input[type="radio"]:checked + label, input[type="radio"]:not(:checked) + label {
+    font-size: 14px; }
+  .main_calculator {
+    padding: 15px 10px;
+    border-width: 6px; }
+  .result-prof {
+    margin-right: 25px; }
+  .cost_calk, .profit_calk, .cost_calk_2, .profit_calk_2 {
+    font-size: 17px; }
+  .res-wrap {
+    justify-content: space-between; } }
+
+.energetion_navigate_section {
+  padding-top: 15px;
+  border-bottom: 1px solid #e0e0e0; }
+
+.energetion_navigate__block {
   display: flex;
-  align-items: center; }
-  .service_navigation svg {
-    transform: rotate(-90deg);
-    width: 17px;
-    height: 20px; }
-  .service_navigation span {
-    padding-left: 10px; }
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0; }
 
-.service_title {
-  padding-top: 10px; }
-
-.service__block {
-  display: flex;
-  flex-wrap: wrap; }
-
-.service_prof {
-  position: relative;
+.energetion_navigate_li {
   transition: all .2s;
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  padding: 30px 5%;
-  width: 33.3%;
-  background: transparent;
+  cursor: pointer;
+  margin: 0px 45px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid transparent;
+  list-style: none; }
+  .energetion_navigate_li.active {
+    color: #28b56a;
+    border-bottom: 1px solid #28b56a; }
+
+.project_section {
+  position: relative;
+  padding-top: 130px; }
+
+.slide_arrow {
+  transition: all .2s;
+  width: 10px;
+  margin: 0px 10px;
   cursor: pointer; }
-  .service_prof:after {
+  .slide_arrow img {
+    width: 100%; }
+  .slide_arrow:hover {
+    transform: scale(1.1); }
+
+.project_slider_navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: 85px;
+  padding: 0px 5%; }
+
+.project_slider_profile {
+  display: block;
+  transition: all .2s;
+  position: relative;
+  height: 370px;
+  margin: 20px 60px;
+  margin-bottom: 75px;
+  cursor: pointer; }
+  .project_slider_profile_bg {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer; }
+    .project_slider_profile_bg img {
+      transition: all 2.2s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .project_slider_profile:after {
     content: '';
     position: absolute;
-    top: -100vh;
-    right: 0;
-    width: 1px;
-    height: 200vh;
-    background: rgba(255, 255, 255, 0.119); }
-  .service_prof:last-child:after {
-    display: none; }
-  .service_prof_arrow {
-    width: 15px;
-    transform: rotate(90deg); }
-  .service_prof_title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; }
-    .service_prof_title span {
-      padding-right: 10px; }
-  .service_prof_img {
-    padding-bottom: 10px; }
-  .service_prof:hover {
-    background: #ffffff2b; }
-  .service_prof_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .service_prof_btn:hover {
-      background: transparent; }
+    width: 100%;
+    height: 90px;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); }
+  .project_slider_profile_content {
+    position: absolute;
+    bottom: -50px;
+    left: 35px;
+    z-index: 1; }
+  .project_slider_profile_price {
+    line-height: 1.2; }
+  .project_slider_profile:hover .project_slider_profile_bg img {
+    transform: scale(1.3); }
 
-@media screen and (max-height: 830px) and (min-width: 1520px) {
-  .service_navigation__block {
-    position: relative; }
-  .service_section {
-    justify-content: unset; } }
+.preferens_section {
+  position: relative;
+  margin-top: 100px; }
+
+.preferens__wrapper {
+  display: flex; }
+
+.preferens_right_content {
+  padding-top: 50px;
+  width: 47%; }
+
+.preferens_number__block {
+  position: relative;
+  background-color: #28b56a;
+  padding: 50px 70px;
+  padding-top: 25px;
+  margin-right: 55px;
+  width: calc(53% - 55px); }
+
+.preferens_number_content {
+  margin-top: 25px; }
+
+.preferens_number_item {
+  line-height: 1.3; }
+
+.green_tariff_section {
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: -240px; }
+  .green_tariff_section .shadow_title {
+    top: -100px; }
+
+.green_tariff_title {
+  width: 100%;
+  text-align: center; }
+
+.tariff_video {
+  position: relative;
+  width: 680px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 20px; }
+
+.benefits_section {
+  position: relative;
+  padding-top: 170px; }
+  .benefits_section .shadow_title {
+    opacity: .3;
+    top: -40px; }
+  .benefits_section .benefits_content__block {
+    position: relative;
+    bottom: -200px; }
+  .benefits_section .benefits_content_text {
+    padding-bottom: 200px; }
+
+.benefits_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #1a1919; }
+  .benefits_bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2; }
+
+.benefits__block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.benefits_profile {
+  width: 33.3%;
+  padding-right: 100px;
+  margin-top: 50px; }
+  .benefits_profile .btn_standart {
+    width: 100%;
+    padding: 15px 25px; }
+
+.benefits_img {
+  min-height: 55px; }
+
+.benefits_title {
+  padding-top: 15px;
+  padding-bottom: 10px; }
+
+.benefits_content {
+  width: 60%; }
+  .benefits_content_text {
+    width: 60%;
+    padding-bottom: 30px; }
+  .benefits_content .benefits_content_text {
+    width: 100%; }
+  .benefits_content__block {
+    display: flex;
+    align-items: center; }
+  .benefits_content_img {
+    width: calc(40% - 40px); }
+    .benefits_content_img img {
+      width: 100%; }
+  .benefits_content_title {
+    padding-bottom: 30px; }
+
+.benefits_content__block {
+  overflow: hidden;
+  padding-right: 5%; }
+  .benefits_content__block .benefits_content_img {
+    margin-right: 40px; }
+  .benefits_content__block:nth-child(2n) {
+    padding-left: 5%;
+    padding-right: 0; }
+    .benefits_content__block:nth-child(2n) .benefits_content_img {
+      margin-left: 40px;
+      margin-right: 0; }
+  .benefits_content__block_3 {
+    align-items: unset; }
+    .benefits_content__block_3 .benefits_content {
+      padding-top: 40px; }
+    .benefits_content__block_3 .benefits_content_img {
+      overflow: hidden;
+      position: relative;
+      height: 1000px; }
+      .benefits_content__block_3 .benefits_content_img img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+
+.investment_section {
+  position: relative;
+  padding-top: 450px; }
+  .investment_section .shadow_title {
+    top: 250px; }
+  .investment_section .benefits_content__block {
+    margin-bottom: 150px; }
+
+.investment_list_btn {
+  cursor: pointer;
+  padding: 24px 0px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .investment_list_btn img {
+    transition: all .2s;
+    transform: rotate(-90deg); }
+
+.investment_content {
+  z-index: -1;
+  padding-bottom: 0; }
+  .investment_content_profile {
+    position: relative;
+    margin-top: 12px;
+    display: flex; }
+    .investment_content_profile span {
+      width: calc(100% - 12px); }
+    .investment_content_profile_plus {
+      position: relative;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      margin-right: 12px; }
+      .investment_content_profile_plus:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 12px;
+        height: 1px;
+        transform: translateY(-50%);
+        background: #28b56a; }
+      .investment_content_profile_plus:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 12px;
+        transform: translateX(-50%);
+        background: #28b56a; }
+
+.investment_list__block {
+  position: relative;
+  padding: 0px 15px;
+  background: #fafafa;
+  margin: 30px 0;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8; }
+  .investment_list__block .investment_content {
+    transition: all .3s ease-in-out .3s;
+    position: relative;
+    bottom: -100vh;
+    max-height: 0;
+    opacity: 0; }
+  .investment_list__block.active .investment_list_btn img {
+    transition: all .2s;
+    transform: rotate(90deg); }
+  .investment_list__block.active .investment_content {
+    bottom: 0;
+    opacity: 1;
+    max-height: 2000px;
+    padding-bottom: 40px;
+    z-index: 1;
+    padding-bottom: 24px; }
+
+.consultant__block {
+  display: flex;
+  align-items: center; }
+
+.consultant_title {
+  margin-right: 10px; }
+
+@media (max-width: 1500px) {
+  .investment_section {
+    padding-top: 380px; }
+    .investment_section .shadow_title {
+      font-size: 80px; } }
+
+@media (max-width: 1338px) {
+  .project_slider_profile {
+    height: 270px; } }
+
+@media (max-width: 1240px) {
+  .main_calculator {
+    width: 100% !important; }
+  .calculate_section .shadow_title {
+    top: -110px; }
+  .calculator_wrap::after {
+    position: absolute;
+    width: 100%; }
+  .calculator_content {
+    position: relative !important;
+    top: 0;
+    left: 5%;
+    margin-bottom: 50px;
+    width: 100%; } }
+
+@media (max-width: 1100px) {
+  .benefits_section {
+    padding-top: 40px; }
+    .benefits_section .shadow_title {
+      font-size: 70px;
+      top: -20px; }
+  .benefits_profile {
+    width: 30%;
+    padding-right: 10px; }
+  .green_tariff_section .shadow_title {
+    font-size: 80px; }
+  .project_section .shadow_title {
+    position: absolute;
+    font-size: 70px; }
+  .project_slider_navigation {
+    top: 45px; }
+  .preferens_number__block {
+    padding: 10px 30px 20px; }
+  .energetion_navigate__block {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0; }
+  .energetion_navigate_li {
+    margin: 0;
+    padding-bottom: 3px;
+    margin-bottom: 10px; } }
 
 @media (max-width: 992px) {
-  .service_prof {
+  .benefits_profile {
+    width: 100%;
+    padding-right: 0; }
+  .benefits_profile .btn_standart {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 25px; }
+  .benefits_section .benefits_content__block {
+    bottom: 0;
+    margin-top: 40px;
+    padding-bottom: 40px; }
+  .investment_section {
+    padding-top: 50px; }
+    .investment_section .shadow_title {
+      top: 20px;
+      font-size: 45px; }
+  .investment_section .benefits_content__block {
+    margin-bottom: 50px; }
+  .benefits_section .benefits_content_text {
+    padding-bottom: 0; }
+  .project_slider_profile {
+    height: 180px;
+    margin: 10px 25px 35px; }
+    .project_slider_profile .standart_title_7 {
+      font-size: 50px; }
+  .project_slider_profile_content {
+    position: absolute;
+    bottom: -30px;
+    left: 15px; }
+  .preferens__wrapper {
+    flex-direction: column; }
+  .calculate_section .shadow_title {
+    position: absolute;
+    font-size: 60px; }
+  .preferens_number__block {
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .preferens_number_content {
     width: 100%; }
-  .service_section {
-    overflow: auto;
-    height: unset; }
-  .service_navigation__block {
-    position: relative; }
-  .service_prof:after {
-    content: '';
-    display: none; } }
+  .preferens_right_content {
+    padding-top: 40px;
+    width: 100%; } }
+
+@media (max-width: 775px) {
+  .benefits_content__block {
+    display: flex;
+    flex-direction: column; }
+  .project_slider_profile {
+    margin: 0;
+    margin-bottom: 50px; }
+  .tariff_video {
+    position: relative;
+    width: 100%;
+    height: 400px; }
+  .benefits_content__block .benefits_content_img {
+    display: none; }
+  .benefits_content_text {
+    width: 100%; }
+  .investment_section {
+    padding-bottom: 40px; }
+    .investment_section .benefits_content__block {
+      padding: 0px 5%; }
+  .benefits_content__block {
+    padding-right: 0; }
+  .investment_section .benefits_content__block {
+    margin-bottom: 0px; }
+  .benefits_content {
+    width: 100%; } }
+
+@media (max-width: 490px) {
+  .green_tariff_section {
+    position: relative;
+    margin-top: 110px; }
+  .calculate_section {
+    padding-top: 330px; }
+  .calculate_section .shadow_title {
+    top: -50px; }
+  .tariff_video {
+    height: 240px; }
+  .shadow_title {
+    color: #28b56a; }
+  .project_slider_navigation {
+    top: 22px; }
+  .shadow_title {
+    font-size: 40px !important; }
+  .project_section {
+    padding-top: 80px; }
+  .preferens_section {
+    margin-top: 50px; }
+  .green_tariff_section .shadow_title {
+    top: -60px; }
+  .preferens_number__block {
+    padding: 0px 20px 10px; }
+  .investment_section .shadow_title {
+    display: none; }
+  .benefits_section .shadow_title {
+    top: 0px; }
+  .calculate_section {
+    overflow: hidden; } }
+
+@media (max-width: 420px) {
+  .res-wrap {
+    justify-content: center; }
+    .res-wrap .consultatin_btn {
+      margin: 0 auto;
+      margin-top: 10px; }
+  .cost_calk, .profit_calk, .cost_calk_2, .profit_calk_2 {
+    font-size: 19px; }
+  .result-prof {
+    margin-right: 0;
+    width: 50%;
+    text-align: center; }
+  .result-block {
+    padding: 15px 5px; } }
+
+@media (max-width: 390px) {
+  .shadow_title {
+    font-size: 30px !important; }
+  .project_slider_navigation {
+    top: 15px; } }
 
 
 /*# sourceMappingURL=index.css.map*/
