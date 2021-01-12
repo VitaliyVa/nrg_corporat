@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./static/source/lib/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./static/source/lib/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="./static/source/pages/land_plot/index.css">
+
+</head>
+
+<div class="test_map">
+  <img src="./static/source/img/land_plot/map.png" alt="">
+</div>
+
+<body>
+  <div class="load_spin">
+    <img src="./static/source/img/712.svg" alt="">
+  </div>
+  <form method="POST" action="" class="true_form" id="modal-form_true" style="display:none;">
+    <img class="form_true_img" src="./static/source/img/png-123.png" alt="">
+    <svg class='error_form' color='red' aria-hidden="true" focusable="false" data-prefix="fas"
+      data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z">
+      </path>
+    </svg>
+    <div class="usually_modal_text">
+      Дякуємо, заявка опрацьована <br> Наші менеджери звяжуться з Вами
+    </div>
+  </form>
+
+  <header class="header">
+    <div class="container">
+      <div class="header_lang__block header_item">
+        <a href="#" class="header_lang_link active sub_title sub_title_0 color_white">Укр</a>
+        <a href="#" class="header_lang_link sub_title sub_title_0 color_white">Eng</a>
+      </div>
+      <a href="/" class="header_logo__block">
+        <img src="./static/source/img/nrg-logo-vector-copy.svg" alt="">
+      </a>
+      <a href="tel:+380961231212" class="header_mobile_link header_item sub_title sub_title_0 color_white">
+        +38 096 123 12 12
+      </a>
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+  <div class="side_menu_svg">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tasks" role="img"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tasks fa-w-16 fa-3x">
+      <path fill="currentColor"
+        d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+        class=""></path>
+    </svg>
+  </div>
+  <form action="/test/" class="side_menu">
+    <div class="side_menu_title standart_title standart_title_3 color_black">
+      Форест
+    </div>
+    <ul class="list">
+      <li class="list__item">
+        <label class="label--checkbox">
+          <input type="checkbox" class="checkbox">
+          Показати продані участки <span class="check_box_dot"></span>
+        </label>
+      </li>
+    </ul>
+    <div class="range_input__block">
+      <div class="range_input_name standart_title standart_title_0 color_black">
+        Ціна <span class="value_item sub_title sub_title_0 color_black"></span>
+      </div>
+      <div class="range_slider" id="slider_price"></div>
+      <div class="range_input_info">
+        <div data-value='220000' data-type='у.о.' class="range_input_min sub_title sub_title_0 color_black">
+          220 000 у.о.
+        </div>
+        <div data-value='960000' data-type='у.о.' class="range_input_max sub_title sub_title_0 color_black">
+          960 000 у.о.
+        </div>
+      </div>
+    </div>
+    <div class="range_input__block">
+      <div class="range_input_name standart_title standart_title_0 color_black">
+        Площа дому <span class="value_item sub_title sub_title_0 color_black"></span>
+      </div>
+      <div class="range_slider" id="slider_size"></div>
+      <div class="range_input_info">
+        <div data-value='181' data-type='м2' class="range_input_min sub_title sub_title_0 color_black">
+          181 м2
+        </div>
+        <div data-value='560' data-type='м2' class="range_input_max sub_title sub_title_0 color_black">
+          560 м2
+        </div>
+      </div>
+    </div>
+    <ul class="list">
+      <li class="list__item">
+        <label class="label--checkbox">
+          <input type="checkbox" class="checkbox">
+          Вихід до води
+        </label>
+      </li>
+    </ul>
+    <div class="list_item__block">
+      <div class="list_item_title standart_title standart_title_0 color_black">
+        Спальні
+      </div>
+      <ul class="list">
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bedrooms" value="1" checked class="checkbox">
+            1
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bedrooms" value="2" class="checkbox">
+            2
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bedrooms" value="3" class="checkbox">
+            3
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bedrooms" value="4" class="checkbox">
+            4
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="list_item__block">
+      <div class="list_item_title standart_title standart_title_0 color_black">
+        Санвузли
+      </div>
+      <ul class="list">
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bathrooms" value="1" checked class="checkbox">
+            1
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bathrooms" value="2" class="checkbox">
+            2
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bathrooms" value="3" class="checkbox">
+            3
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="bathrooms" value="4" class="checkbox">
+            4
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="list_item__block">
+      <div class="list_item_title standart_title standart_title_0 color_black">
+        Поверхи
+      </div>
+      <ul class="list">
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="floor" value="1" checked class="checkbox">
+            1
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="floor" value="2" class="checkbox">
+            2
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="floor" value="3" class="checkbox">
+            3
+          </label>
+        </li>
+        <li class="list__item">
+          <label class="label--checkbox">
+            <input type="radio" name="floor" value="4" class="checkbox">
+            4
+          </label>
+        </li>
+      </ul>
+    </div>
+    <ul class="list">
+      <li class="list__item">
+        <label class="label--checkbox">
+          <input type="checkbox" class="checkbox">
+          Басейн
+        </label>
+      </li>
+    </ul>
+    <ul class="list">
+      <li class="list__item">
+        <label class="label--checkbox">
+          <input type="checkbox" class="checkbox">
+          Сауна
+        </label>
+      </li>
+    </ul>
+    <div class="side_menu_btn btn_standart btn_standart_transparent">
+      Очистити фільтр
+    </div>
+  </form>
+  <!-- /.side_menu -->
+
+  <form method="POST" action="/test/" class="form_consultation modal_form" id="form_consultation" style="display:none;">
+    <div class="all_title__block">
+      <div class="all_title main__title main__title_2 color_white">
+        Залиште заявку і наші менеджери звяжуться з вами.
+      </div>
+    </div>
+    <div class="input input-black">
+      <div class="input_box">
+        <input placeholder="Ім'я" class="input-field txtNumeric" type="text" id="contact_name" name="name">
+      </div>
+    </div>
+    <div class="input input-black in-focus">
+      <div class="input_box">
+        <input placeholder="Номер телефону" class="input-field valid" type="tel" id="contact_phone" name="phone">
+      </div>
+    </div>
+    <input type="submit" value="Надіслати" class="form_btn btn_standart btn_standart_red">
+  </form>
+
+
+  <script src="./static/source/lib/jquery/index.js"></script>
+  <script src="./static/source/lib/validation/validation.min.js"></script>
+  <script src="./static/source/lib/nouislider/nouislider.min.js"></script>
+  <script src="./static/source/lib/maskinput/maskinput.js"></script>
+  <script src="./static/source/lib/fancybox/jquery.fancybox.min.js"></script>
+  <script src="./static/source/pages/land_plot/index.js"></script>
+</body>
+
+</html>

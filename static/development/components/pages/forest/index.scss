@@ -1,0 +1,312 @@
+.city_plan {
+    &_section {
+        position: relative;
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_content {
+        width: 50%;
+    }
+    &_text {
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+    &_img {
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+.house_type {
+    &_section {
+        position: relative;
+        padding-bottom: 80px;
+        padding-top: 60px;
+        background: #fafafa;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &_profile {
+        position: relative;
+        overflow: hidden;
+        width: 45%;
+        margin: 2.5%;
+        height: 450px;
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65));
+        }
+
+        &_content {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0px;
+            bottom: 10px;
+            width: 100%;
+            z-index: 1;
+            padding: 0px 30px;
+        }
+        &_img {
+            transition: all 2s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &_info {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+
+            &_profile {
+                margin: 0px 35px;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.about_forest {
+    &_section {
+        position: relative;
+        height: 100vh;
+    }
+    &_settings {
+        display: none;
+    }
+    &_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    &_title {
+        padding-top: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &_navigate {
+        &__block {
+            position: absolute;
+            left: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 6px;
+                z-index: -1;
+                height: calc(100% - 22px);
+                width: 1px;
+                background: #fff;
+            }
+        }
+        &_item {
+            position: relative;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            margin-bottom: 10px;
+            &_indicator {
+                transition: all .2s;
+                margin-right: 15px;
+                position: relative;
+                left: 0;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #fff;
+            }
+
+            &.done {
+                .about_forest_navigate_item_indicator {
+                    background: #28b56a;
+                }
+            }
+            &.active {
+                .about_forest_navigate_item_indicator {
+                    background: #28b56a;
+                    width: 19px;
+                    height: 19px;
+                    left: -3px;
+                    margin-right: 9px;
+                }
+            }
+
+            &:hover {
+                .about_forest_navigate_item_indicator {
+                    width: 19px;
+                    height: 19px;
+                    left: -3px;
+                    margin-right: 9px;
+                }
+                   
+            }
+           
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1450px) {
+    .house_type_profile {
+        height: 400px;
+    }    
+}
+@media (max-width: 1350px) {
+    .house_type_profile_info_profile {
+        margin: 0px 15px;
+    }
+}
+
+
+
+@media (max-width: 1180px) {
+    .house_type_profile {
+        width: 100%;
+        height: 550px;
+    }    
+}
+
+@media (max-width: 930px) {
+    .city_plan__block {
+        flex-direction: column;
+    }
+    .city_plan_content {
+        width: 100%;
+    }
+    .city_plan_img {
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    
+    
+}
+
+@media (max-width: 750px) {
+    .about_forest_settings {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        
+
+
+        svg {
+            width: 100%;
+            height: 100%;
+            color: #28b56a;
+        }
+    }
+    .about_forest_title__wrap {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        
+    }
+    .about_forest_title {
+        padding-top: 0;
+        text-align: start;
+
+    }
+    .about_forest_video {
+        height: auto;
+        min-height: 300px;
+    }
+    .about_forest_navigate__block {
+        transition: all .2s;
+        position: absolute;
+        left: -120%;
+        top: 0;
+        opacity: 0;
+        transform: unset;
+        background: #000000a6;
+        padding: 10px;
+
+        &.active {
+            left: 0;
+            opacity: 1;
+        }
+    }
+    .about_forest_navigate__block::after {
+        left: 16px;
+        height: calc(100% - 44px);
+        top: 17px;
+        z-index: 1;
+    }
+    .about_forest_navigate_item {
+        z-index: 2;
+    }
+    .about_forest_section {
+        height: unset;
+    }
+    .house_type_profile {
+        height: 300px;
+    }    
+    .city_plan_section {
+        margin-top: 20px;
+    }
+    .house_type_section {
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
+}
+@media (max-width: 420px) {
+    .house_type_profile {
+        height: 200px;
+    }    
+    .house_type_profile_content {
+        flex-direction: column;
+        padding: 0;
+    }
+    .house_type_profile_info {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .house_type_profile_info_profile {
+        display: flex;
+        align-items: center;
+    }
+    .house_type_profile_info_name {
+        margin-right: 10px;
+    }
+}

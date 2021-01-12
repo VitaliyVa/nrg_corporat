@@ -1,0 +1,214 @@
+.info_house {
+    &_section {
+        position: relative;
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+    &__block {
+        display: flex;
+    }
+    &_side_menu {
+            position: sticky;
+            top: 90px;
+            height: calc(100vh - 100px);
+            box-shadow: -11px 12px 35px 0 rgba(0, 0, 0, 0.17);
+            background-color: #fff;
+            padding: 35px 25px;
+
+        &__block {
+            width: 400px;
+            margin-right: 40px;
+            
+        }
+        &_title {
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+        &_profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        &_btn {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% - 50px);
+
+        }
+    }
+    &_content {
+        &__block {
+            width: calc(100% - 440px);
+        }
+        &_text {
+            margin-top: 30px;
+            margin-bottom: 45px;
+        }
+        &_plan {
+            &_title {
+                margin-bottom: 30px;
+            }
+            &_profile {
+                display: flex !important;
+
+                &_content {
+                    width: 150px;
+                    margin-left: 30px;
+                }
+
+                &_img {
+                    width: calc(100% - 180px);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &_slider__block {
+        position: relative;
+    }
+}
+.slide_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: solid 1px #1a1919;
+    cursor: pointer;
+
+}
+.project_slider {
+    &_navigation {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: -18px;
+        width: calc(100% + 36px);
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+    }
+    &_profile {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.info_house_content_plan__block {
+    ul {
+        margin-top: 20px;
+        justify-content: center;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        width: calc(100% - 180px);
+    }
+    li {
+        transition: all .2s;
+        list-style: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #000000;
+        opacity: 0.3;
+        cursor: pointer;
+        margin: 0px 6px;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+        button {
+            display: none;
+        }
+    }
+    li.slick-active {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+.info_house_download {
+    &_btn {
+        transition: all .2s;
+        margin-top: 20px;
+        display: flex;
+        border-radius: 4px;
+        border: solid 1px #2fbb73;
+        background: #fff;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 15px 40px;
+        width: fit-content;
+        width: -moz-fit-content;
+
+        span {
+            transition: all .2s;
+        }
+        svg {
+            transition: all .2s;
+            width: 16px;
+            color: #1D293F;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background:#2fbb73;
+            span {
+                color: #fff;
+            }
+            svg {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .info_house__block {
+        flex-direction: column;
+    }
+    .info_house_side_menu__block {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .info_house_content__block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 470px) {
+    .info_house_content_plan_profile {
+        flex-direction: column-reverse;
+    }
+    .info_house_content_plan_profile_content {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .info_house_content_plan__block ul, .info_house_content_plan_profile_img {
+        width: 100%;
+    }
+    .info_house_content_plan_title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .info_house_download_btn {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+}

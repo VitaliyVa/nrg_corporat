@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./static/source/lib/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./static/source/lib/slick/slick.min.css">
+  <link rel="stylesheet" href="./static/source/pages/info_house/index.css">
+
+</head>
+
+<body>
+  <div class="load_spin">
+    <img src="./static/source/img/712.svg" alt="">
+  </div>
+  <form method="POST" action="" class="true_form" id="modal-form_true" style="display:none;">
+    <img class="form_true_img" src="./static/source/img/png-123.png" alt="">
+    <svg class='error_form' color='red' aria-hidden="true" focusable="false" data-prefix="fas"
+      data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z">
+      </path>
+    </svg>
+    <div class="usually_modal_text">
+      Дякуємо, заявка опрацьована <br> Наші менеджери звяжуться з Вами
+    </div>
+  </form>
+
+  <header class="header">
+    <div class="container">
+      <div class="header_lang__block header_item">
+        <a href="#" class="header_lang_link active sub_title sub_title_0 color_white">Укр</a>
+        <a href="#" class="header_lang_link sub_title sub_title_0 color_white">Eng</a>
+      </div>
+      <a href="/" class="header_logo__block">
+        <img src="./static/source/img/nrg-logo-vector-copy.svg" alt="">
+      </a>
+      <a href="tel:+380961231212" class="header_mobile_link header_item sub_title sub_title_0 color_white">
+        +38 096 123 12 12
+      </a>
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+
+  <section class="info_house_section">
+    <div class="container">
+      <div class="info_house__block">
+        <div class="info_house_side_menu__block">
+          <div class="info_house_side_menu">
+            <a href="/" class="service_navigation sub_title sub_title_1 color_black">
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-up" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+                class="svg-inline--fa fa-long-arrow-up fa-w-8 fa-5x">
+                <path fill="currentColor"
+                  d="M3.515 168.97l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L111 92.113V468c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V92.113l83.444 83.928c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-116-116.485c-4.686-4.686-12.284-4.686-16.971 0L3.515 152c-4.687 4.686-4.687 12.284 0 16.97z"
+                  class=""></path>
+              </svg>
+              <span>Котеджне містечко</span>
+            </a>
+            <div class="info_house_side_menu_title standart_title standart_title_3 color_black">
+              Бангладеш
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Населений пункт
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                Байківці
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Ціна
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                370 000 у.о.
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Площа дому
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                350м2
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Поверхи
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                2
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Спальні
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                4
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Санвузли
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                6
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Сауна
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                так
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Підвал
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                так
+              </div>
+            </div>
+            <div class="info_house_side_menu_profile">
+              <div class="info_house_side_menu_name sub_title sub_title_1 color_black">
+                Термін будівництва
+              </div>
+              <div class="info_house_side_menu_value standart_title standart_title_0 color_black">
+                4 місяця
+              </div>
+            </div>
+            <div class="info_house_side_menu_btn btn_standart btn_standart_green">
+              Замовити будинок
+            </div>
+          </div>
+        </div>
+        <div class="info_house_content__block">
+          <div class="info_house_slider__block">
+            <div class="project_slider_navigation">
+              <div class="left_slide_arrow slide_arrow">
+                <img src="./static/source/img/sun_energetion/arrow-left-copy.svg" alt="">
+              </div>
+              <div class="right_slide_arrow slide_arrow">
+                <img src="./static/source/img/sun_energetion/arrow-right-copy.svg" alt="">
+              </div>
+            </div>
+            <div class="project_slider__block">
+              <div class="project_slider_profile">
+                <img src="./static/source/img/forest/forest-3.png" alt="">
+              </div>
+              <div class="project_slider_profile">
+                <img src="./static/source/img/forest/forest-3.png" alt="">
+              </div>
+              <div class="project_slider_profile">
+                <img src="./static/source/img/forest/forest-3.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="info_house_content_text sub_title sub_title_1 color_black">
+            Компактний двоповерховий котедж з трьома спальнями. Побудований з червоної цегли і утеплений зовні
+            кремнієвої мінеральною ватою. На першому поверсі розташовується кабінет, кухня, їдальня, простора вітальня з
+            можливістю установки каміна і виходом на криту терасу. Гардеробна кімната і санвузол, гараж і навіс для
+            одного автомобіля. На другому поверсі три спальні, дві з яких мають балкон. В основній спальні обладнаний
+            власний санвузол і гардеробна. Для двох інших спалень є загальний санвузол і гардеробна. Будинок продається
+            з обробкою фасаду в сучасному стилі, отмосткой навколо будинку, забором, воротами. До будинку підведені
+            комунікації (електрика, газ, вода).
+          </div>
+          <div class="info_house_content_plan_title standart_title standart_title_3 color_black">
+            План дому
+          </div>
+          <div class="info_house_content_plan__block">
+            <div class="info_house_content_plan_profile">
+              <div class="info_house_content_plan_profile_img">
+                <img src="./static/source/img/info_house/info.png" alt="">
+              </div>
+              <div class="info_house_content_plan_profile_content">
+                <div class="info_house_content_plan_profile_content_name standart_title standart_title_0 color_black">
+                  Перший поверх
+                </div>
+                <div class="info_house_content_plan_profile_content_value sub_title sub_title_1 color_black">
+                  150 м2
+                </div>
+              </div>
+            </div>
+            <div class="info_house_content_plan_profile">
+              <div class="info_house_content_plan_profile_img">
+                <img src="./static/source/img/info_house/info.png" alt="">
+              </div>
+              <div class="info_house_content_plan_profile_content">
+                <div class="info_house_content_plan_profile_content_name standart_title standart_title_0 color_black">
+                  Другий поверх
+                </div>
+                <div class="info_house_content_plan_profile_content_value sub_title sub_title_1 color_black">
+                  50 м2
+                </div>
+              </div>
+            </div>
+            <div class="info_house_content_plan_profile">
+              <div class="info_house_content_plan_profile_img">
+                <img src="./static/source/img/info_house/info.png" alt="">
+              </div>
+              <div class="info_house_content_plan_profile_content">
+                <div class="info_house_content_plan_profile_content_name standart_title standart_title_0 color_black">
+                  Третій поверх
+                </div>
+                <div class="info_house_content_plan_profile_content_value sub_title sub_title_1 color_black">
+                  50 м2
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" download class="info_house_download_btn">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="file" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-file fa-w-12 fa-5x">
+              <path fill="currentColor"
+                d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"
+                class=""></path>
+            </svg>
+            <span class="infohouse_download_text standart_title standart_title_0 color_black">
+              Скачати план будинку
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.info_house_section -->
+
+  <form method="POST" action="/test/" class="form_consultation modal_form" id="form_consultation" style="display:none;">
+    <div class="all_title__block">
+      <div class="all_title main__title main__title_2 color_white">
+        Залиште заявку і наші менеджери звяжуться з вами.
+      </div>
+    </div>
+    <div class="input input-black">
+      <div class="input_box">
+        <input placeholder="Ім'я" class="input-field txtNumeric" type="text" id="contact_name" name="name">
+      </div>
+    </div>
+    <div class="input input-black in-focus">
+      <div class="input_box">
+        <input placeholder="Номер телефону" class="input-field valid" type="tel" id="contact_phone" name="phone">
+      </div>
+    </div>
+    <input type="submit" value="Надіслати" class="form_btn btn_standart btn_standart_red">
+  </form>
+
+
+  <script src="./static/source/lib/jquery/index.js"></script>
+  <script src="./static/source/lib/slick/slick.min.js"></script>
+  <script src="./static/source/lib/validation/validation.min.js"></script>
+  <script src="./static/source/lib/maskinput/maskinput.js"></script>
+  <script src="./static/source/lib/fancybox/jquery.fancybox.min.js"></script>
+  <script src="./static/source/pages/info_house/index.js"></script>
+</body>
+
+</html>

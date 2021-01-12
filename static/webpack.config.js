@@ -41,6 +41,9 @@ module.exports = {
         index: './index.js',
         energetion: './energetion.js',
         sun_energetion: './sun_energetion.js',
+        forest: './forest.js',
+        info_house: './info_house.js',
+        land_plot: './land_plot.js',
     },
     output: {
         filename: '[name]/index.js',

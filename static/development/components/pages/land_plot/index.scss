@@ -1,0 +1,126 @@
+.test_map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+     img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+     }
+}
+
+.side_menu {
+    position: relative;
+    top: 90px;
+    overflow-y: auto;
+    height: calc(100vh - 90px);
+    box-shadow: -11px 12px 35px 0 rgba(0, 0, 0, 0.17);
+    background-color: #fff;
+    padding: 25px;
+    width: 400px;
+
+    &_btn {
+        width: 100%;
+        margin-top: 45px;
+    }
+}
+
+.range_input {
+    &_name {
+        margin-bottom: 10px;
+    }
+    &__block {
+        margin-top: 25px;
+    }
+    &_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+}
+
+.noUi-connect {
+    background: #28b56a;
+}
+.noUi-horizontal {
+    height: 4px;
+}
+.noUi-target {
+    border: 1px solid transparent;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 21px;
+    height: 21px;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
+    background: #28b56a;
+    border: 1px solid #28b56a;
+    outline: none;
+    cursor: pointer;
+
+    &:after, &:before {
+        display: none;
+    }
+}
+
+.side_menu_svg {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .side_menu_svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9;
+        border-radius: 4px;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        background: #fff;
+        svg {
+            width: 60%;
+            height: 60%;
+            color: #009688;
+
+        }
+    }
+    .side_menu {
+        transition: all .2s;
+        left: -120%;
+        opacity: 0;
+
+        &_title {
+            text-align: end;
+        }
+        &.active {
+            left: 0;
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .side_menu_svg {
+        width: 60px;
+        height: 60px;
+    }
+    .side_menu {
+        width: 100%;
+    }
+    .side_menu_title {
+        margin-bottom: 35px;
+    }
+    
+    
+}

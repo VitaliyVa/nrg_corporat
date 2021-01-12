@@ -47,6 +47,9 @@ main {
     letter-spacing: normal;
     font-weight: 400;
     
+    &_0_1 {
+        font-size: 13px;
+    }
     &_0 {
         font-size: 14px;
     }
@@ -66,6 +69,10 @@ main {
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
+
+    &_0_1 {
+        font-size: 13px;
+    }
     &_0 {
         font-size: 16px;
     }
